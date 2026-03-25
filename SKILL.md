@@ -17,6 +17,19 @@ A structured critical reading framework for academic finance and economics paper
 synthesizing guidance from Brendan Price (UC Davis, 2019) and Sangmin Oh
 (Columbia Business School, 2024).
 
+## Quick Reference
+
+| Step | What happens |
+|------|-------------|
+| **0 — Classify** | Detect paper type (Empirical / Theoretical / Mixed) and finance sub-field |
+| **1 — Summarize** | Type-adaptive bullet summary; key equations for theory/mixed papers |
+| **2 — Empirical eval** | Data, methods, identification, robustness (load `references/empirical-by-field.md`) |
+| **3 — Theory eval** | Model ingredients, assumptions, real-world connection |
+| **4 — General** | Contribution, literature positioning, exposition |
+| **5 — Output** | Structured review: What the Paper Does → Strengths → Questions → Verdict |
+
+**Output rules**: Summary uses labeled bullet blocks (not prose). Every concern is a question. Verdict ends with a single Key Takeaway sentence.
+
 ---
 
 ## Step 0 — Intake and Classification (Always Do This First)
