@@ -24,7 +24,7 @@ synthesizing guidance from Brendan Price (UC Davis, 2019) and Sangmin Oh
 | **0 — Classify** | Detect paper type (Empirical / Theoretical / Mixed) and finance sub-field |
 | **1 — Summarize** | Type-adaptive bullet summary; key equations for theory/mixed papers |
 | **2 — Empirical eval** | Data, methods, identification, robustness (load `references/empirical-by-field.md`) |
-| **3 — Theory eval** | Model ingredients, assumptions, real-world connection |
+| **3 — Theory eval** | Follow canonical arc: Setup → Equilibrium → Results → Comparative statics → Extensions → Empirical connection (load `references/theory-roadmap.md`) |
 | **4 — General** | Contribution, literature positioning, exposition |
 | **5 — Output** | Structured review: What the Paper Does → Strengths → Questions → Verdict |
 
@@ -168,29 +168,24 @@ Read the relevant sub-field reference file for field-specific red flags:
 
 *Apply fully for Theoretical papers. Apply to the model sections of Mixed papers. Skip for purely Empirical papers.*
 
-### 3A. Model Ingredients
+**Load the theory roadmap before evaluating**:
+→ `references/theory-roadmap.md`
 
-1. **General approach**: Does the model framework accurately capture the empirical phenomenon of interest? Is the model unnecessarily complicated?
-2. **Objective functions**: Is it reasonable for agents to maximize the assumed objective (e.g., are there missing motives such as risk aversion, learning, or constraints)?
-3. **Game structure**: Is the assumed game form (timing, number of stages, strategic interaction) sensible?
-4. **Optimality claims**: If the authors claim something is "optimal," is it clear what social or private objective is being optimized?
-5. **Model novelty**: How does the model differ from existing models of the same phenomenon? Is the departure well-motivated?
-6. **Missing agents or groups**: Are there relevant actors omitted from the model that could materially change results?
+The roadmap structures critique to follow the **canonical presentation arc** of a finance theory paper. Work through it in order:
 
-### 3B. Assumptions
+| Stage | Focus |
+|-------|-------|
+| **1 — Motivation & Question** | Is the gap real? Is the mechanism story clear before the math? Are the motivating facts well-established? |
+| **2 — Setup** | Agents, preferences, endowments, timing, information — is every assumption doing real economic work, or is it just convenient? |
+| **3 — Equilibrium** | Is the solution concept appropriate? Does an equilibrium exist and is it unique? How is multiplicity handled? |
+| **4 — Main Results** | Is each proposition a deep insight or a mechanical consequence of the setup? Is the driving force statable without math? |
+| **5 — Comparative Statics** | Are the comparative statics empirically meaningful? Are signs unambiguous? Are non-monotonicities plausible? |
+| **6 — Extensions** | Which simplifying assumptions are most load-bearing? Are general equilibrium and heterogeneity addressed? |
+| **7 — Empirical Connection** | Are calibration moments the right ones? Does the model make distinguishing predictions that alternatives cannot? |
 
-1. **Reasonableness**: Are modeling assumptions chosen arbitrarily, or are they grounded in the data and institutional setting?
-2. **Functional form**: If a function is assumed to be monotone, convex, or separable — is this consistent with the underlying economic mechanism?
-3. **Dynamic assumptions**: If the model is dynamic, do the results hinge on stationarity or the assumption that the future resembles the past?
-4. **Constant parameters**: Is it reasonable to treat parameters (e.g., risk aversion, discount rates) as constant rather than time-varying or heterogeneous?
-5. **Omitted variables in model**: Are there variables that belong in the model but are excluded?
+For sub-field-specific theory conventions (what an asset pricing paper must deliver vs. a corporate finance paper), see the **Finance Sub-Field Theory Conventions** section of `references/theory-roadmap.md`.
 
-### 3C. Connection to Data and Real World
-
-1. **Calibration**: Is the model calibrated properly? Should calibration target additional moments from the data?
-2. **Quantitative fit**: Do model-implied magnitudes (elasticities, levels, ratios) align with empirical evidence? Are implied values economically plausible?
-3. **Out-of-sample implications**: Does the model generate testable predictions beyond the paper's scope? Do the authors omit interesting implications?
-4. **Alternate consistency**: Is the model consistent with stylized facts only under specific conditions that may not hold in other environments?
+Also consult the **Common Theory Paper Failure Modes** table at the end of `references/theory-roadmap.md` — flag any that apply.
 
 ---
 
@@ -260,8 +255,11 @@ itself, and (optionally) what evidence or test would resolve it.]
 #### Motivation & Contribution
 #### Data [Empirical/Mixed only]
 #### Identification & Methods [Empirical/Mixed only]
-#### Model [Theoretical/Mixed only]
-#### Robustness & Interpretation
+#### Model Setup & Assumptions [Theoretical/Mixed only — Stages 2–3 of theory roadmap]
+#### Main Results & Comparative Statics [Theoretical/Mixed only — Stages 4–5]
+#### Extensions & Robustness [Theoretical/Mixed only — Stage 6]
+#### Empirical Connection [Theoretical/Mixed only — Stage 7]
+#### Robustness & Interpretation [Empirical/Mixed only]
 #### Exposition [only if notable issues]
 
 ---
